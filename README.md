@@ -1,5 +1,3 @@
-Team Space Project
-
 ## About the project
 
 Team Space Project is a project design as company intranet page. Here you can see the News Feed, places for lunch and reserve a device for testig, a book or a meeting room.
