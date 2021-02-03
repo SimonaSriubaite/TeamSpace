@@ -1,4 +1,4 @@
-![Image of Rocket](https://icons.iconarchive.com/icons/google/noto-emoji-travel-places/1024/42598-rocket-icon.png) 
+![Image of Rocket](https://icons.iconarchive.com/icons/google/noto-emoji-travel-places/24/42598-rocket-icon.png) 
 ## About the project
 
 Team Space Project is a project design as company intranet page. Here you can see the News Feed, places for lunch and reserve a device for testig, a book or a meeting room.
