@@ -1,0 +1,191 @@
+@import '../../styles/base/base';
+@import '../../styles/mixins/index';
+
+.hero {
+    $this: &;
+
+    margin-bottom: 3rem;
+    position: relative;
+
+    @include respond-to($tablet-mid, min) {
+        &__title {
+            font-size: $font-size-h1-big;
+        }
+
+        &__interactions--span {
+            display: inline;
+        }
+    }
+
+    @include respond-to($tablet-mid, max) {
+        &__title {
+            font-size: $font-size-h2;
+        }
+
+        &__interactions--span {
+            display: none;
+        }
+    }
+
+    @include respond-to($tablet-min, min) {
+        &__interactions {
+            width: calc(100% - 8rem);
+        }
+
+        &__container--inner {
+            margin: 0 4rem;
+        }
+    }
+
+    @include respond-to($mobile, max) {
+        &__interactions {
+            width: calc(100% - 3rem);
+
+            &--span {
+                display: none;
+            }
+        }
+
+        &__container--inner {
+            margin: 0 1.5rem;
+        }
+    }
+
+    &__figure {
+        height: 51.7rem;
+        position: relative;
+
+        &::before {
+            background: linear-gradient(
+                98.06deg,
+                #f6f7f8 18.8%,
+                rgba(255, 255, 255, 0) 103.31%
+            );
+            content: '';
+            display: block;
+            height: 100%;
+            position: absolute;
+            width: 100%;
+        }
+
+        &-img {
+            height: 51.7rem;
+            object-fit: cover;
+            object-position: center;
+            width: 100%;
+        }
+    }
+
+    &__container {
+        display: flex;
+        justify-content: center;
+
+        &--inner {
+            max-width: 126.4rem;
+            width: 100%;
+        }
+    }
+
+    &__banner-wrapper {
+        bottom: 6.9rem;
+
+        position: absolute;
+
+        #{$this}__categories {
+            display: flex;
+            margin-top: -4rem;
+            position: absolute;
+
+            &-item {
+                align-items: center;
+                background-color: $color-black;
+                border-radius: 0.8rem;
+                color: $color-white;
+                display: flex;
+                font-size: $font-size-smallest;
+                font-weight: 500;
+                justify-content: center;
+                line-height: 1.6rem;
+                margin-right: 1.1rem;
+                padding: 0.6rem 1.2rem;
+            }
+        }
+
+        #{$this}__title {
+            color: $color-black;
+            font-weight: 700;
+            margin: 0;
+        }
+    }
+
+    &__interactions {
+        align-items: center;
+        background: $color-gray-7;
+        border-radius: 0.5rem;
+        bottom: -3.2rem;
+        box-shadow: $box-shadow-medium;
+        display: flex;
+        height: 6.4rem;
+        justify-content: space-between;
+        max-width: 126.4rem;
+        padding: 0 1.6rem;
+        position: absolute;
+
+        &--span {
+            font-size: $font-size-small;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        &-container {
+            align-items: center;
+            display: flex;
+            font-size: $font-size-smallest;
+            font-weight: 500;
+            text-transform: uppercase;
+
+            &--span {
+                color: $color-gray-2;
+                margin-right: 1.6rem;
+            }
+
+            &--ratings {
+                background-color: $color-warning;
+                border-radius: 0.8rem;
+                font-weight: 700;
+                height: 3.2rem;
+                padding: 0.8rem 1.2rem;
+                width: 6.5rem;
+            }
+        }
+
+        .button--large {
+            height: 3.2rem;
+            line-height: 1.3rem;
+            padding: 1rem 1.6rem;
+        }
+    }
+
+    .likes {
+        margin-left: 7.6rem;
+
+        &-iconBigger {
+            height: 2.787rem;
+            width: 24.31rem;
+        }
+
+        .button--like-comment {
+            color: $color-black;
+            height: 3.8rem;
+            width: 3.8rem;
+        }
+
+        .heart-icon__path {
+            stroke-width: 1.5;
+        }
+    }
+
+    .rating-label {
+        position: absolute;
+    }
+}

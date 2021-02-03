@@ -1,0 +1,63 @@
+@import '../../styles/base/base';
+@import '../../styles/mixins/index';
+
+.list {
+    grid-column: 2 / 5;
+    margin-top: 6.2rem;
+
+    @include respond-to(768, max) {
+        grid-column: 1 / span 2;
+    }
+
+    &__tags {
+        align-items: center;
+        display: flex;
+        margin-bottom: 1.5rem;
+    }
+
+    &__result {
+        color: $color-pure-black;
+        font-size: $font-size-big;
+        font-weight: 500;
+        white-space: nowrap;
+
+        &--italic {
+            font-style: italic;
+            margin-left: 1.5rem;
+        }
+    }
+
+    &__category {
+        align-items: center;
+        background-color: $color-white;
+        border: 0.1rem solid $color-gray-4;
+        border-radius: 0.8rem;
+        color: $color-gray-1;
+        cursor: pointer;
+        display: flex;
+        font-size: $font-size-smallest;
+        font-weight: 500;
+        height: 2.8rem;
+        margin-left: 1.5rem;
+        padding: 0.6rem 1.2rem;
+    }
+
+    &__category-icon {
+        margin-left: 1rem;
+    }
+    /* stylelint-disable */
+    @include respond-to(768, max) {
+        flex-wrap: wrap;
+
+        &__result {
+            color: $color-pure-black;
+            font-size: $font-size-smallest;
+            font-weight: 500;
+
+            &--italic {
+                font-style: italic;
+                margin-left: 1.5rem;
+            }
+        }
+    }
+}

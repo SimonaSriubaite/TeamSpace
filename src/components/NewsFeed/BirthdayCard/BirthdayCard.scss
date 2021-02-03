@@ -1,0 +1,39 @@
+@import '../../../styles/base/base';
+@import '../../../styles/mixins/index';
+
+.birthday-card {
+    color: $color-gray-2;
+    text-align: center;
+
+    &__circle-cropper {
+        border-radius: 50%;
+        height: 10rem;
+        margin: 0 auto -5rem;
+        overflow: hidden;
+        width: 10rem;
+    }
+
+    &__profile-pic {
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+    }
+
+    &__feed-card-style {
+        @include feed-card-style;
+        padding-top: 1.8rem;
+    }
+
+    &__main {
+        background-image: url('../../../assets/birthday-card-bg.svg');
+        background-repeat: no-repeat;
+        border-bottom: 1px solid $color-gray-5;
+        color: $color-black;
+        line-height: $line-height-biggest;
+        padding: 5rem 0 1.6rem;
+    }
+
+    &__caption {
+        padding-bottom: 0.3rem;
+    }
+}

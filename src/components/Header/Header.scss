@@ -1,0 +1,46 @@
+@import '../../styles/base/base';
+@import '../../styles/mixins/index';
+
+.header {
+    align-items: center;
+    background-color: $color-white;
+    box-shadow: $box-shadow-small;
+    display: flex;
+    height: 9.6rem;
+    justify-content: flex-end;
+    padding: 0.8rem 4rem;
+    position: sticky;
+    top: 0;
+    z-index: $z-index-header;
+
+    @include respond-to($mobile, max) {
+        background-color: $color-primary;
+
+        .notification-icon {
+            &__bell {
+                stroke: $color-white;
+            }
+
+            &__badge {
+                stroke: $color-primary;
+            }
+        }
+
+        .notifications-icon:hover,
+        .notifications-icon:focus {
+            .notification-icon__bell {
+                stroke: $color-gray-1;
+            }
+
+            .notification-icon__badge {
+                stroke: $color-gray-6;
+            }
+        }
+    }
+
+    &__nav {
+        column-gap: 1.6rem;
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+}

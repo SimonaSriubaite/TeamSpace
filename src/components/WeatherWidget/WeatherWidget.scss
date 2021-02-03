@@ -1,0 +1,102 @@
+@import '../../styles/base/base';
+@import '../../styles/mixins/index';
+
+.float-right {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+
+    @include respond-to(1024, max) {
+        justify-content: flex-start;
+    }
+
+    @include respond-to($mobile, max) {
+        display: none;
+    }
+
+    &--loading {
+        margin-top: 0;
+    }
+}
+
+.weather-info {
+    background-color: $color-white;
+    border-radius: 1rem;
+    display: inline-block;
+    color: rgba($color-pure-black, 0.5); /* stylelint-disable-line */
+    max-width: 40rem;
+    min-height: 17.59rem;
+    padding: 0.9rem 12rem 0.9rem 1.8rem;
+    text-align: start;
+    width: 75%;
+
+    @include respond-to($tablet-mid, max) {
+        max-width: none;
+        width: 100%;
+    }
+
+    &__date {
+        letter-spacing: 0.1rem;
+        min-height: 3.4rem;
+    }
+
+    &__current-weather {
+        margin: 2.6rem 0 0;
+    }
+
+    &__current-temp {
+        color: rgba($color-pure-black, 0.7); /* stylelint-disable-line */
+        display: inline-block;
+        font-size: 6rem; /* stylelint-disable-line */
+        padding-right: 1rem;
+    }
+
+    &__current-description {
+        display: inline;
+    }
+
+    &__wind {
+        align-items: center;
+        border-top: 1px solid rgba($color-pure-black, 0.3);
+        display: flex;
+        padding-top: 0.8rem;
+        width: 20rem;
+
+        &--space-between {
+            padding-right: 3rem;
+        }
+    }
+
+    &--inactive {
+        padding: 7.5rem 5rem;
+    }
+}
+
+.weather-icon {
+    display: inline-block;
+    margin-left: -12rem;
+    position: relative;
+    width: 21rem;
+
+    &__sun {
+        margin-left: -11rem;
+        width: 20rem;
+    }
+
+    &__rain {
+        margin-left: -15rem;
+        margin-top: 4.8rem;
+        transform: translateY(-5rem);
+        width: 23rem;
+    }
+
+    &__storm {
+        margin-left: -15rem;
+        width: 23rem;
+    }
+
+    &__snow {
+        margin-top: -0.6rem;
+        width: 20rem;
+    }
+}

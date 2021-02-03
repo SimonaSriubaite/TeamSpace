@@ -1,0 +1,113 @@
+@import '../../../styles/base/base';
+@import '../../../styles/mixins/index';
+
+.result {
+    background-color: $color-white;
+    border-radius: 0.8rem;
+    box-shadow: $box-shadow-medium;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 2.4rem;
+    max-width: 93.8rem;
+    padding: 1.6rem 2.4rem 1.7rem;
+
+    &__info {
+        margin-left: 2rem;
+    }
+
+    &__icon {
+        height: 12.8rem;
+        width: 10rem;
+    }
+
+    &__header {
+        color: $color-gray-2;
+        font-size: $font-size-smallest;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+
+    &__title {
+        color: $color-dark-gray;
+        font-size: $font-size-biggest;
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+        margin-top: 0.5rem;
+    }
+
+    &__available {
+        align-items: center;
+        color: $color-gray-1;
+        display: flex;
+        font-size: $font-size-smallest;
+        font-weight: 500;
+    }
+
+    &__heart-icon {
+        margin-left: auto;
+    }
+
+    &__available-icon {
+        margin-right: 0.5rem;
+    }
+
+    &__footer {
+        color: $color-gray-2;
+        font-size: $font-size-smallest;
+        font-weight: 500;
+        margin-top: 1.9rem;
+    }
+
+    &__categories {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: auto;
+    }
+
+    &__button-wrapper {
+        display: flex;
+    }
+
+    &__button {
+        align-items: center;
+        background-color: $color-white;
+        border: 0;
+        border-radius: 6.5rem;
+        color: $color-gray-2;
+        cursor: pointer;
+        display: flex;
+        font-size: $font-size-smallest;
+        height: 3.2rem;
+        justify-content: center;
+        text-transform: uppercase;
+
+        &--colorful {
+            background-color: $color-primary;
+            color: $color-white;
+            margin-left: 1rem;
+            width: 6.4rem;
+        }
+    }
+
+    /* stylelint-disable */
+    @include respond-to(1160, max) {
+        flex-wrap: wrap;
+
+        &__categories {
+            flex-direction: row;
+            margin-left: 0;
+            margin-top: 1rem;
+            width: 100%;
+        }
+
+        &__heart-icon {
+            margin-left: 0;
+            margin-right: auto;
+        }
+
+        &__header {
+            margin-top: 1rem;
+        }
+    }
+}

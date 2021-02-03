@@ -1,0 +1,12 @@
+@import '../../styles/base/base';
+
+.footer {
+    align-items: center;
+    background-color: $color-white;
+    box-shadow: $box-shadow-small;
+    display: flex;
+    height: 7.2rem;
+    justify-content: flex-end;
+    margin-top: auto;
+    padding: 0.8rem 4rem;
+}

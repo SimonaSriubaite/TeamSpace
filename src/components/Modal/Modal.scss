@@ -1,0 +1,36 @@
+@import '../../styles/base/base';
+
+.overlay {
+    align-items: center;
+    background-color: $color-black-overlay;
+    bottom: 0;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: $z-index-overlay;
+}
+
+.modal {
+    background-color: $color-white;
+    border-radius: $card-border-radius;
+    box-shadow: $box-shadow-medium;
+    margin: 0 auto;
+    max-height: 100%;
+    max-width: 60rem;
+    padding: $default-spacing-large;
+    position: relative;
+    width: 100%;
+    z-index: $z-index-modal;
+
+    &__header {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+    }
+}

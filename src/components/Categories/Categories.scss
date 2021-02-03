@@ -1,0 +1,12 @@
+@import '../../styles/base/base';
+
+.categories {
+    max-width: 126.4rem;
+
+    &__wrapper {
+        display: grid;
+        grid-column-gap: 4rem;
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        padding-top: 2rem;
+    }
+}

@@ -1,0 +1,68 @@
+@import '../../../styles/base/base';
+@import '../../../styles/mixins/index';
+
+.review-card {
+    border-radius: 0.8rem;
+    box-shadow: $box-shadow-medium;
+    color: $color-black-1;
+    display: none;
+    margin-bottom: 1.6rem;
+    max-height: 100%;
+    max-width: 39.5rem;
+    padding: 2rem 1.6rem;
+    position: relative;
+
+    @include respond-to($mobile, max) {
+        max-width: 100%;
+    }
+
+    &--full {
+        display: block;
+    }
+
+    &__title {
+        font-size: $font-size-small;
+        font-weight: 700;
+        margin-bottom: 0.8rem;
+        padding-right: 5.5rem;
+        text-transform: uppercase;
+    }
+
+    &__paragraph {
+        font-size: $font-size-small;
+        font-weight: 400;
+        word-wrap: break-word;
+    }
+
+    &__rating {
+        align-items: center;
+        background-color: $color-warning;
+        border-radius: 0 0.8rem;
+        display: flex;
+        font-size: $font-size-small;
+        font-weight: 700;
+        height: 3.2rem;
+        justify-content: center;
+        line-height: 1.6rem;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 6.5rem;
+
+        &-icon {
+            margin-right: 0.8rem;
+        }
+
+        &-number {
+            margin-top: 0.2rem;
+        }
+    }
+}
+
+.review-card:nth-child(-n + 3) {
+    display: block;
+}
+
+.rating-label__star-path {
+    fill: $color-black-1;
+}

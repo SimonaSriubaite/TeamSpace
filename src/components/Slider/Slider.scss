@@ -1,0 +1,70 @@
+@import '../../styles/base/base';
+@import '../../styles/mixins/index';
+
+.slider {
+    border-radius: 0.8rem;
+    box-shadow: $box-shadow-medium;
+    height: 32.2rem;
+    max-width: 126.4rem;
+    overflow: hidden;
+    position: relative;
+
+    @include respond-to($tablet-min, min) {
+        &-wrapper {
+            height: 32.2rem;
+        }
+    }
+
+    @include respond-to($mobile, max) {
+        height: 42rem;
+
+        &-wrapper {
+            height: 100%;
+        }
+    }
+
+    &-wrapper {
+        display: flex;
+        transition: 0.5s all linear;
+        width: 100%;
+    }
+
+    &__track {
+        display: flex;
+        width: 100%;
+    }
+
+    &__arrows {
+        background: none;
+        border: 0;
+        cursor: pointer;
+        outline: none;
+        padding: 0;
+        position: absolute;
+        top: 2.4rem;
+
+        &:hover {
+            .sliderArrow-icon {
+                stroke: $color-gray-5;
+            }
+        }
+
+        &:active {
+            .sliderArrow-icon {
+                stroke: $color-gray-5;
+            }
+        }
+
+        &--prev {
+            right: 4.7rem;
+        }
+
+        &--next {
+            right: 2.4rem;
+
+            .slider__arrows-svg {
+                transform: rotate(180deg);
+            }
+        }
+    }
+}

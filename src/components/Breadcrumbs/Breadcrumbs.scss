@@ -1,0 +1,35 @@
+@import '../../styles/base/base';
+@import '../../styles/mixins/index';
+
+.breadcrumbs {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 0.3rem;
+    z-index: $z-index-1;
+
+    &--on-top {
+        position: absolute;
+        top: 2.4rem;
+        z-index: $z-index-2;
+    }
+
+    &__separator {
+        color: $color-gray-3;
+        padding-right: 1rem;
+        vertical-align: text-bottom;
+    }
+
+    &__item {
+        color: $color-gray-2;
+        font-size: $font-size-smallest;
+        font-weight: 500;
+        padding-right: 1rem;
+        text-decoration: none;
+        text-transform: uppercase;
+
+        &--link {
+            color: $color-gray-3;
+        }
+    }
+}

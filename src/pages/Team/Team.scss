@@ -1,0 +1,111 @@
+@import '../../styles/base/base';
+
+.team-page {
+    $_font-family-title: monospace;
+    $_font-size-title: 11rem;
+
+    background-image: url('../../assets/status-202-bg.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: $color-primary;
+    display: grid;
+    grid-template: 1fr 1fr 1fr / 1fr 2fr 1fr;
+    max-height: 84vh;
+    padding: 4rem 7rem 0;
+    text-align: center;
+
+    &__header {
+        align-self: center;
+        grid-area: 1 / 2 / 3 / 3;
+    }
+
+    &__title {
+        font-family: $_font-family-title;
+        font-size: $_font-size-title;
+        line-height: 0.8;
+        margin-bottom: 3rem;
+    }
+
+    &__description {
+        color: $color-gray-1;
+        padding: 0 3rem;
+    }
+
+    &__rocket {
+        align-self: end;
+        grid-area: 3 / 2 / 4 / 3;
+    }
+
+    &__person {
+        max-height: 100%;
+
+        &--1 {
+            grid-area: 1 / 1 / 2 / 2;
+        }
+
+        &--2 {
+            grid-area: 2 / 1 / 3 / 2;
+        }
+
+        &--3 {
+            align-self: end;
+            grid-area: 3 / 1 / 4 / 2;
+            max-height: 90%;
+        }
+
+        &--4 {
+            grid-area: 1 / 3 / 2 / 4;
+            max-height: 120%;
+        }
+
+        &--5 {
+            align-self: end;
+            grid-area: 2 / 3 / 4 / 4;
+            margin-bottom: 1rem;
+            max-height: 75%;
+        }
+    }
+}
+
+.floating-1 {
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-name: floating-1;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes floating-1 {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    40% {
+        transform: translate(0, 6px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+.floating-2 {
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-name: floating-2;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes floating-2 {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    60% {
+        transform: translate(1px, -4px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}

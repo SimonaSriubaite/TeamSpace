@@ -1,0 +1,71 @@
+@import '../../../../styles/base/base';
+
+.comments-section {
+    border-top: 1px solid $color-gray-5;
+    color: $color-gray-1;
+    padding: 1rem 0;
+    text-align: start;
+
+    &__separate-comment {
+        margin-bottom: 0.6rem;
+    }
+
+    :nth-last-of-type(2) {
+        margin-bottom: 1rem;
+    }
+
+    &__comment-author {
+        padding-right: 0.8rem;
+        white-space: nowrap;
+    }
+
+    &__comment-text {
+        font-size: $font-size-tiny;
+        word-wrap: break-word;
+    }
+}
+
+.write-comment {
+    display: flex;
+    justify-content: space-between;
+
+    &:not(:first-child) {
+        border-top: 1px solid $color-gray-5;
+        padding-top: 1.2rem;
+    }
+
+    &__circle-cropper {
+        border-radius: 50%;
+        height: 2.4rem;
+        margin-right: 0.7rem;
+        overflow: hidden;
+        width: 2.4rem;
+    }
+
+    &__profile-pic {
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+    }
+
+    &__comment-form {
+        align-items: center;
+        display: flex;
+        flex-grow: 1;
+    }
+
+    &__textarea {
+        border: 0;
+        flex-grow: 1;
+        height: 2.9rem;
+        margin: -0.3rem 0.8rem 0 0;
+        overflow: hidden;
+        padding: 0.9rem 0.8rem;
+        resize: none;
+
+        &::placeholder {
+            color: $color-gray-3;
+            font-size: $font-size-tiny;
+        }
+    }
+}

@@ -1,0 +1,173 @@
+@import '../../styles/base/base';
+@import '../../styles/mixins/index';
+
+.logo-text {
+    display: none;
+}
+
+.home-icon__stroke {
+    stroke: $color-gray-7;
+}
+
+.sidebar {
+    $this: &;
+
+    @include respond-to($tablet-min, min) {
+        background-color: $color-primary;
+        flex-basis: 9.6rem;
+        flex-shrink: 0;
+        max-width: 9.6rem;
+        transition: 0.1s ease-out;
+        z-index: $z-index-sidebar;
+
+        &__wrapper-sticky {
+            position: sticky;
+            top: 0;
+        }
+
+        &__logo {
+            height: 16.5rem;
+            margin: 0;
+            padding: 2.4rem;
+
+            &-img {
+                display: block;
+            }
+        }
+
+        &__pointer {
+            background-color: $color-transparent;
+            border: 0;
+            cursor: pointer;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            right: -1.4rem;
+            top: 12rem;
+            transition: 0.1s ease-out;
+            z-index: $z-index-1;
+
+            &-icon {
+                display: block;
+            }
+        }
+
+        .button-animated {
+            display: none;
+        }
+
+        &--exp {
+            flex-basis: 20.6rem;
+            max-width: 20.6rem;
+
+            .navigation-link {
+                display: block;
+            }
+
+            #{$this}__pointer {
+                transform: rotate(180deg);
+            }
+
+            .logo-text {
+                display: block;
+            }
+
+            .navigation-item__title {
+                color: $color-gray-7;
+                display: block;
+                font-weight: 500;
+                left: 7.6rem;
+                pointer-events: auto;
+                position: relative;
+                top: 0.2rem;
+                width: 12rem;
+            }
+
+            .navigation-item__title--reservations {
+                top: 0.6rem;
+                width: 12rem;
+            }
+            /* stylelint-disable */
+            .active {
+                .navigation-item,
+                .navigation-item--relative {
+                    background-image: url('../../assets/navbackground-big.svg');
+                    background-position: 2.05rem 100%;
+                    background-repeat: no-repeat;
+                    width: 20.6rem;
+                }
+
+                .navigation-item__title {
+                    color: $color-gray-1;
+                    pointer-events: auto;
+                    width: 12rem;
+                }
+
+                .home-icon__stroke,
+                .bookmark-icon__stroke,
+                .compass-icon__stroke {
+                    stroke: $color-gray-1;
+                }
+            }
+            /* stylelint-enable */
+        }
+    }
+
+    @include respond-to($mobile, max) {
+        flex-basis: 0;
+
+        &__wrapper-sticky {
+            background-color: $color-primary;
+            height: 7.6rem;
+            position: fixed;
+            width: 12rem;
+            z-index: $z-index-sidebar;
+        }
+
+        &__logo {
+            height: 9.6rem;
+            margin: 0;
+            padding: 2.4rem;
+
+            &-img {
+                display: block;
+            }
+        }
+
+        &__pointer {
+            display: none;
+        }
+
+        &__navigation {
+            visibility: hidden;
+        }
+
+        .logo-text {
+            display: none;
+        }
+
+        .button-animated {
+            display: block;
+            left: 8rem;
+            position: relative;
+            top: -2.4rem;
+
+            &:focus {
+                box-shadow: 0 0 0.2rem $color-gray-1;
+                outline: none;
+            }
+        }
+
+        &--mobile {
+            #{$this}__wrapper-sticky {
+                height: 100vh;
+                transition: height 0.2s linear;
+                width: 100%;
+            }
+
+            #{$this}__navigation {
+                visibility: visible;
+            }
+        }
+    }
+}

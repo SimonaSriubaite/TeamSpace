@@ -1,0 +1,58 @@
+@import '../../../../styles/base/base';
+
+.video-player {
+    .video-container {
+        border: 0;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        padding: 0 0 100%;
+        position: relative;
+        width: 100%;
+
+        &:focus {
+            outline-width: 2px;
+        }
+
+        &__play-overlay {
+            background-color: $color-white;
+            border-radius: 50%;
+            box-shadow: $box-shadow-medium;
+            color: $color-primary;
+            height: 6rem;
+            padding: 1.8rem;
+            position: absolute;
+            top: 40%;
+            transition: 0.3s ease-out;
+            width: 6rem;
+
+            &:hover,
+            &:active {
+                color: $color-primary-hover;
+            }
+        }
+
+        &__video {
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            width: 100%;
+        }
+    }
+
+    .sound-button {
+        opacity: 0;
+        transition: 0.3s ease-out;
+
+        &:hover,
+        &:active {
+            color: $color-primary-hover;
+        }
+    }
+
+    &:hover {
+        .sound-button {
+            opacity: 1;
+        }
+    }
+}

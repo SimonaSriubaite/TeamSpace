@@ -1,0 +1,7 @@
+@import '../../styles/base/base';
+
+.check-in-button {
+    &--checked {
+        background-color: $color-secondary-darken;
+    }
+}

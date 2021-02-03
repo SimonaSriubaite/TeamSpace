@@ -1,0 +1,25 @@
+@import '../../styles/base/base';
+@import '../../styles/mixins/index';
+
+.newsfeed {
+    &__masonry-grid {
+        margin-top: 2.4rem;
+    }
+
+    &__grid-sizer,
+    &__grid-item {
+        width: calc((100% - 8rem) / 3);
+
+        @include respond-to(1150, max) {
+            width: calc(50% - 2rem);
+        }
+
+        @include respond-to(850, max) {
+            width: 100%;
+        }
+    }
+
+    &__grid-item {
+        margin-bottom: 4rem;
+    }
+}

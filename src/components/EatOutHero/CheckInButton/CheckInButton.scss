@@ -1,0 +1,9 @@
+@import '../../../styles/base/base';
+
+.check-in-button {
+    font-size: $font-size-smallest;
+
+    &--checked {
+        background-color: $color-secondary-darken;
+    }
+}

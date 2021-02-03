@@ -1,0 +1,11 @@
+@import '../../styles/base/base';
+
+.page-info {
+    background: $color-white;
+    border-radius: $card-border-radius;
+    box-shadow: $box-shadow-medium;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 2.4rem;
+    max-width: 82rem;
+}

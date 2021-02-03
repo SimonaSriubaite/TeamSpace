@@ -1,0 +1,121 @@
+@import '../../../styles/base/base';
+@import '../../../styles/mixins/index';
+
+.navigation-link {
+    align-items: flex-end;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    pointer-events: none;
+    text-decoration: none;
+
+    @include respond-to($mobile, max) {
+        align-items: center;
+        justify-content: center;
+    }
+
+    &--relative {
+        position: relative;
+        top: -1.5rem;
+    }
+
+    &--third {
+        top: -3rem;
+    }
+}
+
+.navigation-item {
+    height: 8.9rem;
+    width: 9.6rem;
+
+    @include respond-to($mobile, max) {
+        width: 20rem;
+
+        &__title {
+            color: $color-gray-7;
+            display: block;
+            font-weight: 500;
+            left: 7.6rem;
+            pointer-events: auto;
+            position: relative;
+            top: 0.2rem;
+            width: 12rem;
+        }
+
+        &__title--reservations {
+            top: 0.6rem;
+        }
+    }
+
+    @include respond-to($tablet-min, min) {
+        &__title {
+            display: none;
+        }
+    }
+
+    &__icon {
+        left: 3.6rem;
+        pointer-events: fill;
+        position: relative;
+        top: 3.2rem;
+    }
+
+    &__icon--sm {
+        left: 4rem;
+        position: relative;
+        top: 3.4rem;
+    }
+
+    &:hover {
+        .home-icon__stroke,
+        .bookmark-icon__stroke,
+        .compass-icon__stroke {
+            stroke: $color-gray-1;
+        }
+
+        .navigation-item__title {
+            color: $color-gray-1;
+            pointer-events: auto;
+        }
+    }
+}
+
+.active {
+    @include respond-to($tablet-min, min) {
+        .navigation-item {
+            background-image: url('../../../assets/navbackground-small.svg');
+            background-position: 2.06rem 100%;
+            background-repeat: no-repeat;
+
+            .home-icon__stroke,
+            .bookmark-icon__stroke,
+            .compass-icon__stroke {
+                stroke: $color-gray-1;
+            }
+        }
+    }
+
+    @include respond-to($mobile, max) {
+        .navigation-item,
+        .navigation-item--relative {
+            background-image: none;
+        }
+
+        .navigation-item::before {
+            background-color: $color-white;
+            border-radius: 50%;
+            content: '';
+            height: 4rem;
+            margin-left: 2.8rem;
+            margin-top: 2.4rem;
+            position: absolute;
+            width: 4rem;
+        }
+
+        .home-icon__stroke,
+        .bookmark-icon__stroke,
+        .compass-icon__stroke {
+            stroke: $color-gray-1;
+        }
+    }
+}

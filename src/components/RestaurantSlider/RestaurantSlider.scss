@@ -1,0 +1,93 @@
+@import '../../styles/base/base';
+@import '../../styles/mixins/index';
+
+.restaurant-slider {
+    margin: 0 -2rem;
+    overflow: hidden;
+    position: relative;
+
+    @include respond-to($desktop-max, min) {
+        &__slide {
+            min-width: 33.3%;
+        }
+    }
+
+    @include respond-to($desktop-max, max) {
+        &__slide {
+            min-width: 50%;
+        }
+    }
+
+    @include respond-to($tablet-mid, max) {
+        &__slide {
+            min-width: 100%;
+            padding: 2rem 1.6rem;
+        }
+    }
+
+    @include respond-to($tablet-min, min) {
+        &__header {
+            padding: 0 2rem;
+        }
+
+        &__slide {
+            padding: 2rem;
+        }
+    }
+
+    @include respond-to($mobile, max) {
+        margin: 0 -4rem;
+
+        &__header {
+            padding: 0 1.6rem;
+        }
+
+        &__slide {
+            padding: 2rem 1.6rem;
+        }
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0.4rem;
+    }
+
+    &__title {
+        color: $color-black;
+        font-size: $font-size-h2-smaller;
+    }
+
+    &__wrapper {
+        display: flex;
+        transition: 0.5s all linear;
+        width: 100%;
+    }
+
+    &__track {
+        display: flex;
+        width: 100%;
+    }
+
+    &__arrows {
+        background: none;
+        border: 0;
+        cursor: pointer;
+        outline: none;
+        padding: 0;
+
+        &:hover,
+        &:active {
+            .sliderArrow-icon {
+                stroke: $color-gray-5;
+            }
+        }
+
+        &--next {
+            .restaurant-slider__arrows-svg {
+                margin-left: -0.1rem;
+                transform: rotate(180deg);
+            }
+        }
+    }
+}

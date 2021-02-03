@@ -1,0 +1,46 @@
+@import '../../../styles/base/base';
+
+.category-item {
+    background: $color-gray-8;
+    border-radius: 0.8rem;
+    box-shadow: $box-shadow-big;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    height: 9.6rem;
+    justify-content: center;
+    margin-bottom: 6rem;
+    min-width: 23rem;
+    padding: 0 15rem 0 1.5rem;
+    position: relative;
+    text-decoration: none;
+
+    &:hover {
+        box-shadow: $box-shadow-big-hover;
+    }
+
+    &__name {
+        color: $color-gray-1;
+        font-size: $font-size-biggest;
+        font-weight: 900;
+        line-height: $line-height-smallest;
+        margin-bottom: 0.2rem;
+    }
+
+    &__icon {
+        left: 54%;
+        position: absolute;
+
+        svg {
+            height: 14rem;
+            width: 14rem;
+        }
+    }
+
+    &__reserved-item {
+        color: $color-gray-3;
+        font-size: $font-size-smallest;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+}

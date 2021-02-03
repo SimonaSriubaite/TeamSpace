@@ -1,0 +1,56 @@
+$mobile: 599.5;
+$tablet-min: 600;
+$tablet-mid: 768;
+$tablet-max: 991.5;
+$desktop-min: 992;
+$desktop-max: 1024;
+
+@mixin respond-to($size, $dir) {
+    @if ($size == retina) {
+        // stylelint-disable media-feature-name-no-vendor-prefix
+        @media only screen and (min-resolution: 2dppx),
+            (-webkit-min-device-pixel-ratio: 2) {
+            @content;
+        }
+    } @else if ($size and $dir) {
+        @media screen and (#{$dir}-width: ($size + px)) {
+            @content;
+        }
+    }
+}
+
+@mixin feed-card-style {
+    background-color: $color-white;
+    border-radius: 0.8rem;
+    box-shadow: $box-shadow-medium;
+    padding: 0.8rem 1.6rem 0;
+}
+
+@mixin like-comment-buttons {
+    align-items: center;
+    border-radius: 50%;
+    color: $color-gray-2;
+    display: flex;
+    height: 3.1rem;
+    justify-content: center;
+    stroke: $color-gray-2;
+    transition: all 0.1s ease-in;
+    width: 3.1rem;
+}
+
+@mixin multiline-ellipsis($lineCount) {
+    /* stylelint-disable-next-line */
+    -webkit-box-orient: vertical;
+    /* stylelint-disable-next-line */
+    display: -webkit-box;
+    -webkit-line-clamp: $lineCount;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+@mixin single-line-ellipsis {
+    overflow: hidden;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

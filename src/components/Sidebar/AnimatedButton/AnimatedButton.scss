@@ -1,0 +1,166 @@
+@import '../../../styles/base/base';
+
+.button-animated {
+    background: $color-primary;
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 4rem;
+    left: 50%;
+    outline: none;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 4rem;
+
+    span {
+        background: $color-white;
+        border-radius: 0.2rem;
+        height: 0.2rem;
+        left: 50%;
+        overflow: hidden;
+        position: absolute;
+        top: 50%;
+        transition: all 0.3s linear;
+        width: 2.5rem;
+    }
+
+    span::before {
+        background: $color-gray-2;
+        content: '';
+        height: 100%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transition: all 0.3s linear;
+        width: 0;
+    }
+
+    span:nth-child(1) {
+        animation: span-first-off 0.5s ease-in-out;
+        animation-fill-mode: forwards;
+    }
+
+    span:nth-child(2) {
+        animation: span-second-off 0.5s ease-in-out;
+        animation-fill-mode: forwards;
+    }
+
+    span:nth-child(3) {
+        animation: span-third-off 0.5s ease-in-out;
+        animation-fill-mode: forwards;
+    }
+}
+
+.button-animated--on {
+    &:hover span::before {
+        transition: all 0.3s linear;
+        width: 100%;
+    }
+
+    span:nth-child(1) {
+        animation: span-first-on 0.5s ease-in-out;
+        animation-fill-mode: forwards;
+    }
+
+    span:nth-child(2) {
+        animation: span-second-on 0.5s ease-in-out;
+        animation-fill-mode: forwards;
+    }
+
+    span:nth-child(3) {
+        animation: span-third-on 0.5s ease-in-out;
+        animation-fill-mode: forwards;
+    }
+}
+
+@keyframes span-first-on {
+    0% {
+        transform: translate(-50%, -300%);
+    }
+
+    30% {
+        transform: translate(-50%, -50%);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(-45deg);
+    }
+}
+
+@keyframes span-first-off {
+    0% {
+        transform: translate(-50%, -50%) rotate(-45deg);
+    }
+
+    30% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -300%);
+    }
+}
+
+@keyframes span-second-on {
+    0% {
+        transform: translate(-50%, -50%);
+    }
+
+    25% {
+        background: $color-gray-2;
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    100% {
+        transform: translate(-150%, -50%) scale(0);
+    }
+}
+
+@keyframes span-second-off {
+    0% {
+        transform: translate(-150%, -50%) scale(0);
+    }
+
+    25% {
+        background: $color-gray-2;
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    100% {
+        transform: translate(-50%, -50%);
+    }
+}
+
+@keyframes span-third-on {
+    0% {
+        transform: translate(-50%, 200%);
+    }
+
+    30% {
+        transform: translate(-50%, -50%);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+}
+
+@keyframes span-third-off {
+    0% {
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    30% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, 200%);
+    }
+}

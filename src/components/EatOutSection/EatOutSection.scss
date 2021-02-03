@@ -1,0 +1,35 @@
+@import '../../styles/base/base';
+@import '../../styles/mixins/index';
+
+.eat-out-section {
+    margin-top: 3rem;
+}
+
+.header-card {
+    align-items: center;
+    background-color: $color-white;
+    border-radius: $card-border-radius;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: $default-spacing-large;
+    text-align: center;
+
+    @include respond-to(1024, max) {
+        grid-column: 1 / 3;
+    }
+    @include respond-to(768, max) {
+        grid-column: auto;
+    }
+
+    &__link {
+        text-decoration: none;
+    }
+
+    &__title {
+        font-size: $font-size-biggest;
+        font-weight: 900;
+        line-height: $line-height-big;
+        margin-bottom: 2.4rem;
+    }
+}

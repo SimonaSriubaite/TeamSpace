@@ -1,0 +1,18 @@
+@import '../../styles/base/base';
+
+.hello-widget {
+    display: flex;
+    flex-direction: column;
+
+    &__clock {
+        color: $color-black-1;
+        font-size: $font-size-clock;
+        font-weight: 700;
+        line-height: 0.9;
+
+        &--text {
+            font-size: $font-size-h1;
+            padding-top: 3rem;
+        }
+    }
+}

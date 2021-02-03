@@ -1,0 +1,45 @@
+@import '../../../styles/base/base';
+@import '../../../styles/mixins/index';
+
+.post-card {
+    @include feed-card-style;
+
+    &__top-info {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 0.8rem;
+    }
+
+    &__circle-cropper {
+        border-radius: 50%;
+        height: 2.4rem;
+        overflow: hidden;
+        width: 2.4rem;
+    }
+
+    &__profile-pic {
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+    }
+
+    &__author {
+        color: $color-black;
+        flex-grow: 1;
+        padding-left: 1.2rem;
+    }
+
+    &__location {
+        color: $color-gray-2;
+        justify-self: flex-end;
+
+        &--space-between {
+            margin: 0 0.8rem;
+        }
+    }
+
+    &__main {
+        margin: 0 -1.6rem;
+    }
+}

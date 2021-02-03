@@ -1,0 +1,31 @@
+@import '../../styles/base/base';
+
+.review {
+    &__textarea {
+        border: 1px solid $color-gray-4;
+        border-radius: $input-border-radius;
+        color: $color-gray-1;
+        font-size: $font-size-small;
+        font-weight: 400;
+        line-height: $line-height-biggest;
+        margin-top: $default-spacing-small;
+        max-width: 100%;
+        padding: 1.2rem 1.6rem;
+        resize: none;
+        width: 100%;
+
+        &:focus {
+            border: 1px solid $color-gray-1;
+            outline: none;
+        }
+
+        &::placeholder {
+            color: $color-gray-4;
+        }
+    }
+
+    .tiny {
+        margin-bottom: $default-spacing-small;
+        text-align: right;
+    }
+}

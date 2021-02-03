@@ -1,0 +1,61 @@
+//GRAYS
+$color-pure-black: rgb(0, 0, 0);
+$color-black: #001836;
+$color-black-1: #31465e;
+$color-gray-1: #3e5067;
+$color-gray-2: #6a7889;
+$color-gray-3: #94a3ad;
+$color-gray-4: #cacfd5;
+$color-gray-4-reg: #8492a6;
+$color-gray-5: #dcdfe3;
+$color-gray-6: #edeff1; //disabled
+$color-gray-7: #f6f7f8;
+$color-gray-8: #fafafa;
+$color-white: #fff;
+$color-transparent: transparent;
+
+$color-primary: #6e44ff;
+$color-secondary: #b892ff;
+
+$color-success: #7bf1a8;
+$color-error: #ff6e75;
+$color-info: #72ddf7;
+$color-warning: #fadb5e;
+$color-error-darken: darken($color-error, 10%);
+$color-secondary-darken: darken($color-secondary, 30%);
+
+//BUTTONS AND LABELS
+$color-primary-hover: #5836cc;
+$color-primary-active: #462ca3;
+$color-disabled-1: #c5d1d4;
+$color-disabled-2: #9ea7b3;
+$color-medium-gray: #31465e;
+$color-dark-gray: #1f2d3d;
+
+//GRADIENTS
+$gradient-error: linear-gradient(
+    180deg,
+    rgba(184, 146, 255, 0.65) 0%,
+    rgba(255, 110, 117, 0.65) 100%
+);
+$gradient-primary: linear-gradient(
+    180deg,
+    rgba(110, 68, 255, 0.65) 0%,
+    rgba(114, 221, 247, 0.65) 100%
+);
+$gradient-secondary: linear-gradient(
+    180deg,
+    rgba(114, 221, 247, 0.65) 0%,
+    rgba(184, 146, 255, 0.65) 100%
+);
+$gradient-success: linear-gradient(
+    180deg,
+    rgba(123, 241, 168, 0.65) 0%,
+    rgba(114, 221, 247, 0.65) 100%
+);
+
+// OVERLAYS
+$color-black-overlay: rgba(0, 0, 0, 0.3);
+
+//COLOR NONE
+$color-none: none;

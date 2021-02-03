@@ -1,0 +1,71 @@
+@import '../../styles/base/base';
+
+.wrapper {
+    min-height: 100vh;
+    width: 100vw;
+}
+
+.wrapper__loader {
+    $color: $color-black;
+    animation: load4 1.3s infinite linear;
+    border-radius: 50%;
+    height: 1rem;
+    margin: 10rem auto;
+    transform: translateZ(0);
+    width: 1rem;
+}
+
+/* stylelint-disable selector-no-qualifying-type */
+
+@keyframes load4 {
+    0%,
+    100% {
+        box-shadow: 0 -3rem 0 0.2rem, 2rem -2rem 0 0, 3rem 0 0 -1rem,
+            2rem 2rem 0 -1rem, 0 3rem 0 -1rem, -2rem 2rem 0 -1rem,
+            -3rem 0 0 -1rem, -2rem -2rem 0 0;
+    }
+
+    12.5% {
+        box-shadow: 0 -3rem 0 0, 2rem -2rem 0 0.2rem, 3rem 0 0 0,
+            2rem 2rem 0 -1rem, 0 3rem 0 -1rem, -2rem 2rem 0 -1rem,
+            -3rem 0 0 -1rem, -2rem -2rem 0 -1rem;
+    }
+
+    25% {
+        box-shadow: 0 -3rem 0 -0.5rem, 2rem -2rem 0 0, 3rem 0 0 0.2rem,
+            2rem 2rem 0 0, 0 3rem 0 -1rem, -2rem 2rem 0 -1rem, -3rem 0 0 -1rem,
+            -2rem -2rem 0 -1rem;
+    }
+
+    37.5% {
+        box-shadow: 0 -3rem 0 -1rem, 2rem -2rem 0 -1rem, 3rem 0 0 0,
+            2rem 2rem 0 0.2rem, 0 3rem 0 0, -2rem 2rem 0 -1rem, -3rem 0 0 -1rem,
+            -2rem -2rem 0 -1rem;
+    }
+
+    50% {
+        box-shadow: 0 -3rem 0 -1rem, 2rem -2rem 0 -1rem, 3rem 0 0 -1rem,
+            2rem 2rem 0 0, 0 3rem 0 0.2rem, -2rem 2rem 0 0, -3rem 0 0 -1rem,
+            -2rem -2rem 0 -1rem;
+    }
+
+    62.5% {
+        box-shadow: 0 -3rem 0 -1rem, 2rem -2rem 0 -1rem, 3rem 0 0 -1rem,
+            2rem 2rem 0 -1rem, 0 3rem 0 0, -2rem 2rem 0 0.2rem, -3rem 0 0 0,
+            -2rem -2rem 0 -1rem;
+    }
+
+    75% {
+        box-shadow: 0 -3rem 0 -1rem, 2rem -2rem 0 -1rem, 3rem 0 0 -1rem,
+            2rem 2rem 0 -1rem, 0 3rem 0 -1rem, -2rem 2rem 0 0, -3rem 0 0 0.2rem,
+            -2rem -2rem 0 0;
+    }
+
+    87.5% {
+        box-shadow: 0 -3rem 0 0, 2rem -2rem 0 -1rem, 3rem 0 0 -1rem,
+            2rem 2rem 0 -1rem, 0 3rem 0 -1rem, -2rem 2rem 0 0, -3rem 0 0 0,
+            -2rem -2rem 0 0.2rem;
+    }
+}
+
+/* stylelint-enable selector-no-qualifying-type */

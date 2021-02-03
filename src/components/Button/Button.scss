@@ -1,0 +1,148 @@
+@import '../../styles/base/base';
+@import '../../styles/mixins/index';
+
+.button {
+    background-color: $color-primary;
+    border: 0;
+    border-radius: 6.5rem;
+    color: $color-white;
+    cursor: pointer;
+    display: flex;
+    font-weight: 500;
+    margin: 0;
+    overflow: visible;
+    padding: 0;
+    text-transform: uppercase;
+    width: auto;
+
+    &:hover,
+    &:focus {
+        background-color: $color-primary-hover;
+    }
+
+    &:active {
+        background-color: $color-primary-active;
+    }
+
+    &:disabled {
+        background-color: $color-gray-6;
+        color: $color-disabled-2;
+    }
+
+    &--text {
+        background-color: $color-transparent;
+        color: $color-gray-2;
+        font-size: $font-size-smallest;
+        font-weight: 500;
+        line-height: $line-height-smallest;
+        text-transform: uppercase;
+
+        &:hover,
+        &:focus {
+            background-color: $color-transparent;
+            color: $color-gray-1;
+        }
+
+        &:active {
+            background-color: $color-transparent;
+            color: $color-black;
+        }
+
+        &:disabled {
+            color: $color-disabled-1;
+        }
+    }
+
+    &--large {
+        font-size: $font-size-body;
+        line-height: 1;
+        padding: 1.2rem 2.4rem;
+    }
+
+    &--medium {
+        font-size: $font-size-smallest;
+        line-height: 1;
+        padding: 1rem 1.6rem;
+        text-transform: uppercase;
+    }
+
+    &--float {
+        background-color: $color-black;
+        border-radius: 1.2rem;
+        display: flex;
+        padding: 1.4rem;
+
+        path {
+            color: $color-white;
+        }
+
+        &:hover,
+        &:focus {
+            background-color: $color-dark-gray;
+        }
+
+        &:active {
+            background-color: $color-medium-gray;
+        }
+
+        &:disabled {
+            background-color: $color-disabled-1;
+
+            path {
+                color: $color-black;
+            }
+        }
+    }
+
+    &--centered {
+        margin: 0 auto;
+    }
+
+    &--like-comment {
+        @include like-comment-buttons;
+        background-color: $color-transparent;
+
+        &:hover {
+            background-color: $color-gray-6;
+        }
+
+        &:focus {
+            background-color: $color-gray-5;
+        }
+
+        &:active {
+            background-color: $color-gray-5;
+            transform: scale(1.04);
+        }
+    }
+
+    &--reservation-empty {
+        background-color: $color-white;
+        border: 0.1rem solid $color-gray-4;
+        border-radius: 0.8rem;
+        color: $color-gray-1;
+        cursor: pointer;
+        font-size: $font-size-smallest;
+        padding: 0.6rem 1rem 0.6rem 1.2rem;
+        text-transform: none;
+
+        &:hover,
+        &:focus {
+            background-color: $color-gray-1;
+            border-color: $color-gray-1;
+            color: $color-white;
+        }
+
+        &:active {
+            background-color: $color-black-1;
+        }
+    }
+
+    &--sound {
+        background-color: $color-transparent;
+        bottom: 6rem;
+        padding: 0.4rem;
+        position: absolute;
+        right: 1.6rem;
+    }
+}

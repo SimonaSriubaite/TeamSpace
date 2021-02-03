@@ -1,0 +1,30 @@
+@import '../../styles/base/base';
+@import '../../styles/mixins/index';
+
+.grid {
+    display: grid;
+    gap: $default-grid-gap;
+    margin-bottom: 6.5rem;
+
+    // sass for loop to give column count to a component based on a class; class comes from a prop in React component; available column counts are 2, 3 and 4;
+
+    @for $i from 2 through 4 {
+        &--columns-#{$i} {
+            grid-template-columns: repeat($i, 1fr);
+
+            @include respond-to(1024, max) {
+                grid-template-columns: repeat($i - 1, 1fr);
+            }
+
+            @include respond-to(768, max) {
+                grid-template-columns: repeat($i - 2, 1fr);
+            }
+        }
+
+        &--columns-2 {
+            @include respond-to(1024, max) {
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+}

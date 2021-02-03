@@ -1,0 +1,82 @@
+@import '../../styles/base/base';
+
+.rating-label {
+    $this: &;
+    align-items: center;
+    background-color: $color-warning;
+    border-radius: $card-border-radius;
+    color: $color-medium-gray;
+    display: grid;
+    grid-template-columns: auto 2.9rem;
+    overflow: hidden;
+    padding: 0.8rem;
+    transition: width 0.3s ease-in-out;
+    width: 6.5rem;
+
+    .caption {
+        font-weight: 700;
+        margin: 0 0.4rem;
+    }
+
+    &:hover,
+    &:focus-within {
+        width: 14.5rem;
+
+        #{$this}__star {
+            opacity: 1;
+            transition: opacity 0.3s ease-in;
+        }
+    }
+
+    &__star-area {
+        direction: rtl;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr) 2rem;
+        justify-self: start;
+        overflow: hidden;
+        white-space: nowrap;
+        width: 100%;
+
+        &:hover {
+            #{$this}__star {
+                #{$this}__star-path {
+                    fill: $color-none;
+                }
+            }
+        }
+    }
+
+    &__star {
+        background-color: $color-transparent;
+        border: 0;
+        color: $color-medium-gray;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        overflow: hidden;
+        padding: 0;
+
+        &:not(:nth-child(5)) {
+            opacity: 0;
+            transition: opacity 0.3s ease-in;
+        }
+
+        #{$this}__star-path {
+            fill: $color-none;
+        }
+
+        &:hover,
+        &:hover ~ #{$this}__star {
+            #{$this}__star-path {
+                fill: $color-medium-gray !important;
+            }
+        }
+
+        &--full-star {
+            #{$this}__star-path {
+                fill: $color-medium-gray;
+            }
+        }
+    }
+}

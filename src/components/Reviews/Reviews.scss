@@ -1,0 +1,56 @@
+@import '../../styles/base/base';
+@import '../../styles/mixins/index';
+
+.reviews {
+    margin: 0 -2rem;
+    max-width: 43.5rem;
+
+    @include respond-to($tablet-min, min) {
+        &__container {
+            padding: 0.2rem 2rem;
+        }
+
+        &__title {
+            padding-left: 2rem;
+        }
+
+        .button--medium {
+            margin: 0.8rem 0 0 2rem;
+        }
+    }
+
+    @include respond-to($mobile, max) {
+        margin: 0;
+        max-width: 100%;
+
+        &__container {
+            padding: 0.2rem 1.6rem;
+        }
+
+        &__title {
+            padding-left: 1.6rem;
+        }
+
+        .button--medium {
+            margin: 0.8rem 0 0 1.6rem;
+        }
+    }
+
+    &__title {
+        font-size: $font-size-h2-smaller;
+        margin-bottom: 2.2rem;
+    }
+
+    &__container {
+        box-sizing: border-box;
+        max-height: 59rem;
+        overflow: auto;
+        width: 100%;
+    }
+
+    .button--medium {
+        display: flex;
+        justify-content: center;
+        width: 10.7rem;
+    }
+}

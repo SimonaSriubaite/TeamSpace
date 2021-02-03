@@ -1,0 +1,190 @@
+@import '../../../styles/base/base';
+@import '../../../styles/mixins/index';
+
+.slide {
+    display: flex;
+    flex-shrink: 0;
+    height: 32.2rem;
+    max-width: 100%;
+    overflow: hidden;
+
+    @include respond-to($tablet-max, max) {
+        &__figure-img {
+            height: 32.2rem;
+            max-width: 100%;
+        }
+    }
+
+    @include respond-to($tablet-min, min) {
+        &__figure {
+            height: 32.2rem;
+
+            &::before {
+                background: linear-gradient(
+                    270deg,
+                    $color-white -0.71%,
+                    rgba(255, 255, 255, 0) 99.41%
+                );
+            }
+        }
+
+        &__section {
+            padding: 0 1rem;
+            width: 43.6rem;
+
+            &-paragraph {
+                height: 9.7rem;
+                -webkit-line-clamp: 4;
+                width: 29.4rem;
+            }
+        }
+    }
+
+    @include respond-to($desktop-min, min) {
+        &__section {
+            padding: 0 5.6rem;
+        }
+    }
+
+    @include respond-to($mobile, max) {
+        display: block;
+        height: 100%;
+
+        &__figure {
+            height: 20rem;
+
+            &::before {
+                background: linear-gradient(
+                    180deg,
+                    rgba(255, 255, 255, 0) 0%,
+                    $color-white 100%
+                );
+            }
+        }
+
+        &__section {
+            height: 22rem;
+            padding: 0 3rem;
+            position: relative;
+            width: 100%;
+
+            &-span {
+                position: absolute;
+                right: 3rem;
+                top: 0.4rem;
+            }
+
+            &-title {
+                font-size: $font-size-h1-mobile;
+                margin-top: 1rem;
+            }
+
+            &-paragraph {
+                height: 5rem;
+                -webkit-line-clamp: 2;
+                width: 100%;
+            }
+        }
+
+        &__button {
+            font-size: $font-size-smallest;
+            margin-top: 1.6rem;
+            position: absolute;
+            right: 3rem;
+        }
+    }
+
+    &-dots {
+        align-items: center;
+        display: flex;
+
+        &__item {
+            margin-right: 1rem;
+            margin-top: 3.3rem;
+
+            &-icon {
+                display: block;
+            }
+        }
+
+        &__item--active {
+            .slide-dots__item-icon {
+                fill: $color-error;
+                height: 0.8rem;
+                width: 0.8rem;
+            }
+
+            .dot-icon__circle {
+                fill: $color-error;
+            }
+        }
+    }
+
+    &__figure {
+        max-width: 82.8rem;
+        position: relative;
+
+        &::before {
+            content: '';
+            display: block;
+            height: 100%;
+            position: absolute;
+            width: 101%;
+        }
+
+        &-img {
+            max-height: 100%;
+            object-fit: cover;
+            object-position: center;
+            width: 100%;
+        }
+    }
+
+    &__section {
+        background-color: $color-white;
+
+        &-span {
+            color: $color-error;
+            display: inline-block;
+            font-size: $font-size-tiny;
+            margin-top: 2.5rem;
+            text-transform: uppercase;
+        }
+
+        &-title {
+            color: $color-black;
+        }
+
+        &-paragraph {
+            /* stylelint-disable-next-line */
+            -webkit-box-orient: vertical;
+            /* stylelint-disable-next-line */
+            display: -webkit-box;
+            overflow: hidden;
+
+            &--full {
+                /* stylelint-disable-next-line */
+                -webkit-box-orient: horizontal;
+                overflow-y: scroll;
+            }
+        }
+    }
+
+    &__button {
+        background-color: $color-error;
+        border: 0;
+        border-radius: 6.5rem;
+        color: $color-white;
+        cursor: pointer;
+        font-weight: 500;
+        line-height: $line-height-biggest;
+        margin-top: 1.6rem;
+        padding: 0.8rem 2.4rem;
+        text-transform: uppercase;
+
+        &:hover,
+        &:focus {
+            background-color: $color-error-darken;
+        }
+    }
+}

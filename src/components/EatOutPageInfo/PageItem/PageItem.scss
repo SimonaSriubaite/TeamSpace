@@ -1,0 +1,25 @@
+@import '../../../styles/base/base';
+
+.page-item {
+    display: flex;
+    margin-left: 2.2rem;
+    padding: 1.5rem 0.5rem;
+    width: 29rem;
+
+    &__icon {
+        padding-right: 1.5rem;
+    }
+
+    &__title {
+        color: $color-gray-1;
+        font-size: $font-size-big;
+        font-weight: 500;
+    }
+
+    &__section {
+        color: $color-gray-2;
+        font-size: $font-size-small;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+}

@@ -1,0 +1,29 @@
+@import '../../styles/mixins/index';
+
+.main {
+    margin: 4rem auto;
+    max-width: 134.5rem;
+    width: 100%;
+
+    &--standard {
+        margin-top: 2.4rem;
+    }
+
+    &--dashboard {
+        margin-top: 4rem;
+    }
+
+    &__content {
+        display: grid;
+        margin: 0 4rem;
+
+        @include respond-to($mobile, max) {
+            margin: 0 1.5rem;
+        }
+    }
+
+    &--single-restaurant {
+        margin: 0 auto;
+        max-width: 100vw;
+    }
+}

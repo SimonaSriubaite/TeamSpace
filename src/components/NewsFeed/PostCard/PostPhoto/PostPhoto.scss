@@ -1,0 +1,13 @@
+@import '../../../../styles/base/base';
+
+.photo-container {
+    padding-bottom: 100%;
+    position: relative;
+
+    &__photo {
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        width: 100%;
+    }
+}

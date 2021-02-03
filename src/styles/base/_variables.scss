@@ -1,0 +1,42 @@
+$font-family-main: 'Roboto', sans-serif;
+$font-family-condensed: 'Roboto Condensed', sans-serif;
+
+//PRE-DEFINED SIZES
+$font-size-biggest: 2.4rem;
+$font-size-big: 2rem;
+$font-size-body: 1.6rem;
+$font-size-small: 1.4rem;
+$font-size-smallest: 1.2rem;
+
+//SPECIFIC SIZE VARIABLES
+$font-size-clock: 10rem;
+$font-size-html: 62.5%;
+$font-size-h1-big: 4.8rem;
+$font-size-h1: 3.6rem;
+$font-size-h1-mobile: 2.7rem;
+$font-size-h2: 3.2rem;
+$font-size-h2-smaller: 2.4rem;
+$font-size-h5: 1.8rem;
+$font-size-tiny: 1rem;
+
+$line-height-huge: 1.6;
+$line-height-biggest: 1.5;
+$line-height-big: 1.4;
+$line-height-small: 1.2;
+$line-height-smallest: 1.1;
+
+$default-grid-gap: 4rem;
+$default-spacing-tiny: 0.4rem;
+$default-spacing-small: 1.6rem;
+$default-spacing-medium: 2.4rem;
+$default-spacing-large: 4rem;
+
+//COMMON BOX SHADOW VALUES
+$box-shadow-small: 0 0 0.4rem rgba(0, 0, 0, 0.2);
+$box-shadow-medium: 0 0.2rem 0.6rem rgba(0, 0, 0, 0.25);
+$box-shadow-big: 0 0.8rem 2.3rem rgba(0, 0, 0, 0.25);
+$box-shadow-big-hover: 0 0.8rem 2.3rem rgba(0, 0, 0, 0.5);
+
+//COMMON BORDER RADIUSES
+$card-border-radius: 0.8rem;
+$input-border-radius: 0.5rem;

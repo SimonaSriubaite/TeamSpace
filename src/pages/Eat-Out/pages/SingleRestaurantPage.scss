@@ -1,0 +1,72 @@
+@import '../../../styles/base/base';
+@import '../../../styles/mixins/index';
+
+.single-restaurant-page {
+    background-color: $color-white;
+    border-radius: 0 0.5rem 0.5rem;
+    margin: 0 -4rem;
+    padding-bottom: 4rem;
+    position: relative;
+
+    @include respond-to($desktop-max, max) {
+        .reviews-container {
+            margin-top: -1.6rem;
+        }
+    }
+
+    @include respond-to($mobile, max) {
+        margin: 0 -1.5rem;
+
+        .reviews-container {
+            margin: 2.4rem -4rem 0;
+        }
+
+        .grid {
+            gap: 0;
+            grid-gap: 0;
+        }
+    }
+
+    &__breadcrumbs {
+        margin: 0 auto;
+        max-width: 126.4rem;
+        position: relative;
+        width: 100%;
+
+        @include respond-to(1455, max) {
+            margin-left: 4rem;
+        }
+
+        @include respond-to($mobile, max) {
+            margin-left: 1.5rem;
+        }
+    }
+
+    &__wrapper {
+        margin: 4rem auto;
+        max-width: 134.5rem;
+        width: 100%;
+    }
+}
+
+.restaurant-info {
+    margin: 0 4rem;
+
+    .restaurant-slider {
+        margin-bottom: -6.4rem;
+        margin-top: -1.6rem;
+    }
+}
+
+.information-container {
+    grid-column: 1 / 3;
+
+    @include respond-to($mobile, max) {
+        margin: 0 -2.5rem;
+    }
+
+    &__title {
+        font-size: $font-size-h2-smaller;
+        margin-bottom: 2.4rem;
+    }
+}

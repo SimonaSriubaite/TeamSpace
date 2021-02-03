@@ -1,0 +1,32 @@
+@import '../../styles/base/base';
+@import '../../styles/mixins/index';
+
+.eat-out {
+    display: grid;
+
+    @include respond-to($mobile, max) {
+        .restaurant-slider {
+            margin: 0 -1.4rem;
+        }
+    }
+
+    &__title {
+        margin-bottom: 3.2rem;
+    }
+
+    &__section {
+        display: grid;
+
+        &--slider {
+            margin-bottom: 6.6rem;
+        }
+
+        &--near-you {
+            margin-top: 1.5rem;
+        }
+
+        &--new-places {
+            margin: -2.1rem 0;
+        }
+    }
+}

@@ -1,0 +1,191 @@
+@import '../../styles/base/base';
+@import '../../styles/mixins/mixins';
+
+.restaurant-card {
+    $this: &;
+    align-items: center;
+    background-color: $color-white;
+    border-radius: $card-border-radius;
+    box-shadow: $box-shadow-medium;
+    display: flex;
+    flex-direction: column;
+    height: 23rem;
+    justify-content: space-between;
+    overflow: hidden;
+    padding: $default-spacing-small;
+    position: relative;
+
+    &--extended {
+        height: 44.5rem;
+
+        #{$this}__ratings-area {
+            justify-content: flex-end;
+        }
+
+        #{$this}__review-count {
+            display: none;
+        }
+
+        #{$this}__info-area {
+            margin-top: 15.8rem;
+        }
+    }
+
+    &__link {
+        display: flex;
+        height: 100%;
+        margin-top: -$default-spacing-small;
+        position: absolute;
+        width: 100%;
+        z-index: $z-index-2;
+    }
+
+    &__image-wrapper {
+        height: 18rem;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        width: 100%;
+
+        &::after {
+            background-image: linear-gradient(
+                to bottom,
+                rgba(255, 255, 255, 0) 0,
+                rgba(255, 255, 255, 1) 100%
+            );
+            content: '';
+            display: block;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+    }
+
+    &__image {
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        width: 100%;
+        z-index: $z-index-1;
+    }
+
+    &__review-count {
+        align-items: center;
+        background-color: $color-medium-gray;
+        border-radius: $card-border-radius;
+        color: $color-warning;
+        display: grid;
+        font-weight: 700;
+        gap: 0.9rem;
+        grid-template-columns: auto auto;
+        left: $default-spacing-small;
+        padding: 0.8rem 1.2rem;
+        position: absolute;
+        top: $default-spacing-small;
+        z-index: $z-index-3;
+    }
+
+    &__rating-label {
+        position: absolute;
+        right: $default-spacing-small;
+        top: $default-spacing-small;
+        z-index: $z-index-3;
+    }
+
+    &__info-area {
+        color: $color-gray-2;
+        margin-top: 13.8rem;
+        padding-right: 0.8rem;
+        width: 100%;
+        z-index: $z-index-2;
+    }
+
+    &__categories {
+        @include single-line-ellipsis;
+        margin-bottom: 0.2rem;
+    }
+
+    &__category-item:not(:last-child)::after {
+        background-color: $color-gray-2;
+        border-radius: 50%;
+        content: ' ';
+        display: inline-block;
+        height: 0.5rem;
+        margin: 0 1.7rem 0.1rem;
+        width: 0.56rem;
+    }
+
+    &__title-area {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    &__title {
+        @include single-line-ellipsis;
+    }
+
+    &__title-link {
+        color: $color-black;
+        max-width: 85%;
+        text-decoration: none;
+    }
+
+    &__like-area {
+        margin-right: -0.6rem;
+    }
+
+    &__extra-info {
+        margin-top: 1.5rem;
+    }
+
+    &__website,
+    &__address {
+        align-items: center;
+        display: flex;
+        margin: 0.8rem 0;
+    }
+
+    &__website-link,
+    &__address-link {
+        color: $color-gray-1;
+        display: flex;
+        font-size: $font-size-smallest;
+        font-weight: 500;
+        max-width: 100%;
+        text-decoration: none;
+        text-transform: uppercase;
+
+        svg {
+            flex-shrink: 0;
+        }
+    }
+
+    &__website-link-text,
+    &__address-link-text {
+        @include single-line-ellipsis;
+        margin-left: 1rem;
+        position: relative;
+        top: 0.1rem;
+    }
+
+    &__description {
+        @include multiline-ellipsis(3);
+        margin-top: 1.2rem;
+    }
+
+    &__buttons {
+        align-items: center;
+        bottom: $default-spacing-medium;
+        display: flex;
+        position: absolute;
+        right: $default-spacing-medium;
+        z-index: $z-index-3;
+
+        .button {
+            margin-left: 0.8rem;
+        }
+    }
+}

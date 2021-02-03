@@ -1,0 +1,112 @@
+html {
+    font-size: $font-size-html; //1rem = 10px
+}
+
+body {
+    color: $color-gray-1;
+    font-family: $font-family-main;
+    font-size: $font-size-body;
+    font-style: normal;
+    font-weight: normal;
+    line-height: $line-height-biggest;
+}
+
+h1,
+.h1 {
+    font-size: $font-size-h1;
+    font-weight: 700;
+    line-height: $line-height-small;
+}
+
+h2,
+.h2 {
+    font-size: $font-size-h2;
+    font-weight: 500;
+    line-height: $line-height-small;
+}
+
+h3,
+.h3 {
+    font-size: $font-size-biggest;
+    font-weight: 500;
+    letter-spacing: 0.05rem;
+    line-height: $line-height-small;
+}
+
+h4,
+.h4 {
+    font-size: $font-size-big;
+    font-weight: 500;
+    line-height: $line-height-small;
+}
+
+h5,
+.h5 {
+    font-size: $font-size-h5;
+    font-weight: normal;
+    line-height: $line-height-small;
+}
+
+.text-paragraph-small {
+    font-size: $font-size-small;
+    font-weight: 500;
+    line-height: $line-height-biggest;
+}
+
+.caption {
+    font-size: $font-size-small;
+    font-weight: 500;
+    line-height: $line-height-small;
+}
+
+.caption-uppercase {
+    font-size: $font-size-smallest;
+    font-weight: 500;
+    line-height: $line-height-smallest;
+    text-transform: uppercase;
+}
+
+.tiny {
+    font-size: $font-size-smallest;
+    font-weight: normal;
+    line-height: $line-height-big;
+}
+
+.tiny-uppercase {
+    font-size: $font-size-tiny;
+    font-weight: 500;
+    line-height: $line-height-smallest;
+    text-transform: uppercase;
+}
+
+.h2-alt {
+    font-size: $font-size-biggest;
+    font-weight: 900;
+    line-height: $line-height-big;
+}
+
+.h3-alt {
+    font-size: $font-size-big;
+    line-height: $line-height-small;
+}
+
+.h4-alt {
+    font-size: $font-size-body;
+    line-height: $line-height-biggest;
+}
+
+.bold {
+    font-weight: 900;
+}
+
+.light {
+    font-weight: normal;
+}
+
+.thin {
+    font-weight: 300;
+}
+
+.condensed {
+    font-family: $font-family-condensed;
+}

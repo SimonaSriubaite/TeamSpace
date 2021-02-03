@@ -1,0 +1,91 @@
+@import '../../styles/base/base';
+@import '../../styles/mixins/index';
+
+.side-filters {
+    margin-top: 10.8rem;
+    min-width: 23rem;
+
+    @include respond-to(768, max) {
+        grid-column: 1 / span 2;
+    }
+
+    &__filter-group {
+        background-color: $color-white;
+        border-radius: 0.8rem;
+        box-shadow: $box-shadow-medium;
+        padding: 1.6rem 2.4rem 1.7rem;
+
+        &:not(:first-of-type) {
+            margin-top: 4rem;
+        }
+    }
+
+    &__filter-group-header {
+        align-items: center;
+        border-bottom: 1px solid $color-gray-4;
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 1.6rem;
+        text-transform: uppercase;
+    }
+
+    &__filter-group-title {
+        color: $color-disabled-2;
+    }
+
+    .clear-all-icon {
+        margin-left: 0.7rem;
+    }
+}
+
+.checkbox {
+    $_this: &;
+
+    align-items: center;
+    display: flex;
+    margin-top: 1.2rem;
+
+    &:first-of-type {
+        margin-top: 2rem;
+    }
+
+    &__input {
+        display: none;
+
+        &:hover + #{$_this}__fakebox {
+            background-color: $color-gray-7;
+        }
+
+        &:focus + #{$_this}__fakebox {
+            border: 2px solid $color-gray-4;
+        }
+
+        &:checked + #{$_this}__fakebox {
+            background-color: $color-primary;
+            border-color: $color-primary;
+            color: $color-white;
+        }
+
+        &:checked ~ #{$_this}__label {
+            font-weight: 500;
+        }
+    }
+
+    &__fakebox {
+        align-items: center;
+        border: 1px solid $color-gray-4;
+        border-radius: 5px;
+        color: $color-transparent;
+        display: flex;
+        height: 1.6rem;
+        justify-content: center;
+        width: 1.6rem;
+    }
+
+    &__label {
+        font-size: $font-size-small;
+        line-height: $line-height-big;
+        margin-left: 1.6rem;
+        padding-top: 1px;
+    }
+}
