@@ -2,7 +2,7 @@
 
 ![Image of Rocket](https://icons.iconarchive.com/icons/google/noto-emoji-travel-places/24/42598-rocket-icon.png) Team Space Project is a project design as company intranet page. Here you can see the News Feed, places for lunch and reserve a device for testig, a book or a meeting room. This project was build during Sourcery Academy for Front-End.
 
-Demo: https://flamboyant-meitner-4470ce.netlify.app/
+Demo:https://team-space.netlify.app/
 
 ## Run the project
 
