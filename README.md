@@ -2,6 +2,7 @@
 
 ![Image of Rocket](https://icons.iconarchive.com/icons/google/noto-emoji-travel-places/24/42598-rocket-icon.png) Team Space Project is a project design as company intranet page. Here you can see the News Feed, places for lunch and reserve a device for testig, a book or a meeting room. This project was build during Sourcery Academy for Front-End.
 
+Demo: https://team-space.netlify.app/
 
 ## Run the project
 
@@ -33,7 +34,7 @@ You will also see any lint errors in the console.
 
 The page uses some environment variables. You will need to create a file .env and insert these variables:
 To access the hosted database use this:
-REACT_APP_DATABASE_URL = "https://sfe2020-status202.azurewebsites.net"
+REACT_APP_DATABASE_URL = "https://team-space.herokuapp.com/"
 Also, it could be runned in the local host if the database is out of reach:
 REACT_APP_DATABASE_URL = "http://localhost:3008"
 To reach the interactive google maps, you will need to insert google maps api key:
